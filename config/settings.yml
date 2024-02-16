@@ -1,0 +1,14 @@
+
+
+spreadsheet_id: "14obAdP2GMPEOE4oOR0sfOodoSod-5QgLYwhv-PndoE0"
+worksheet_name: "Daily_Range"
+
+col_prediction: [
+    'ticker','datetime','spot_price','upper_value','lower_value',
+    'straddle_value','past_straddle_value',
+    'straddle_pct_value','past_straddle_pct_value',
+    'PLower3','PLower2','PLower1',
+    'PMean',
+    'PUpper1','PUpper2','PUpper3',
+]
+
