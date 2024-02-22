@@ -27,7 +27,7 @@ def download_gsheet(gspread_client, config, dataPath):
 def create_pine_script(df):
     pine_script = []
     pine_script.append('// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/')
-    pine_script.append('// © abhi555shek')
+    pine_script.append('// © deerfieldgreen')
     pine_script.append('')
     pine_script.append('//@version=5')
     pine_script.append('indicator("Daily Range Levels", overlay=true)')

@@ -1,5 +1,5 @@
 // This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
-// © abhi555shek
+// © deerfieldgreen
 
 //@version=5
 indicator("Daily Range Levels", overlay=true)
