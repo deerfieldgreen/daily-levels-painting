@@ -1,0 +1,1 @@
+/usr/bin/python3 ~/daily-levels-painting-main/UpdatePine.py 
