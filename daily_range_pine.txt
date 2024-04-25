@@ -11,3 +11,531 @@ var float y_PLower1 = na
 var float y_PMean = na
 var float y_PUpper1 = na
 var float y_PUpper2 = na
+
+// Symbol: QQQ
+if syminfo.ticker == "QQQ"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 425.84
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 411.77
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 404.50
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 411.56
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 418.62
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 425.69
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 432.75
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+// Symbol: SPY
+if syminfo.ticker == "SPY"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 504.65
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 492.48
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 486.30
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 492.61
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 498.91
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 505.22
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 511.53
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+// Symbol: NVDA
+if syminfo.ticker == "NVDA"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 819.77
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 770.23
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 745.43
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 779.60
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 813.78
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 847.96
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 882.13
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+// Symbol: TSLA
+if syminfo.ticker == "TSLA"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 177.95
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 145.83
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 156.00
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 160.33
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 164.66
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 169.00
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 173.33
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+// Symbol: BABA
+if syminfo.ticker == "BABA"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 76.67
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 71.65
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 72.05
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 73.11
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 74.17
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 75.22
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 76.28
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+// Symbol: META
+if syminfo.ticker == "META"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 466.81
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 371.81
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 389.19
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 405.99
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 422.78
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 439.58
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 456.38
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+// Symbol: AMZN
+if syminfo.ticker == "AMZN"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 176.15
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 164.13
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 161.36
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 166.03
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 170.69
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 175.36
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 180.03
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+// Symbol: TLT
+if syminfo.ticker == "TLT"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 88.77
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 86.19
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 86.47
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 87.08
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 87.68
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 88.29
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 88.90
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+// Symbol: GLD
+if syminfo.ticker == "GLD"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 217.51
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 212.03
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 210.91
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 212.91
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 214.91
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 216.91
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 218.91
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+// Symbol: SLV
+if syminfo.ticker == "SLV"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 25.45
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 24.35
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 24.03
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 24.46
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 24.88
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 25.30
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 25.72
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+// Symbol: EWZ
+if syminfo.ticker == "EWZ"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 31.18
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 29.94
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 29.45
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 29.98
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 30.50
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 31.02
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 31.54
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+// Symbol: IWM
+if syminfo.ticker == "IWM"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 197.95
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 191.47
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=color.yellow, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=color.yellow, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 189.46
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 192.31
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 195.15
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 198.00
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 200.84
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
