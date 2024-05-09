@@ -33,7 +33,7 @@ def create_pine_script(df):
     pine_script.append('indicator("Daily Range Levels", overlay=true)')
     pine_script.append('')
 
-    colors = {'upper_value': 'color.yellow', 'lower_value': 'color.yellow', 'PLower2': 'color.purple', 'PLower1': 'color.purple',
+    colors = {'upper_value': '#eb8704', 'lower_value': '#eb8704', 'PLower2': 'color.purple', 'PLower1': 'color.purple',
               'PMean': 'color.purple', 'PUpper1': 'color.purple', 'PUpper2': 'color.purple'}
     for level, color in colors.items():
         pine_script.append(f'var float y_{level} = na')
@@ -45,7 +45,7 @@ def create_pine_script(df):
         pine_script.append(f'if syminfo.ticker == "{symbol}"')
         for level, color in colors.items():
             y_level = row[level]
-            label_color = color if color == 'color.yellow' else 'color.rgb(208, 154, 218)'
+            label_color = color if color == '#eb8704' else 'color.rgb(208, 154, 218)'
             xloc = 'last_bar_index' if level not in ['upper_value', 'lower_value'] else 'last_bar_index-1'
             pine_script.append(f'    var label lbl_{level} = na')
             pine_script.append(f'    label.delete(lbl_{level})')
