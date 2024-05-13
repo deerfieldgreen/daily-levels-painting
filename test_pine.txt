@@ -1,1 +1,101 @@
-# Test File
+// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © deerfieldgreen
+
+//@version=5
+indicator("Daily Range Levels", overlay=true)
+
+var float y_upper_value = na
+var float y_lower_value = na
+var float y_PLower2 = na
+var float y_PLower1 = na
+var float y_PMean = na
+var float y_PUpper1 = na
+var float y_PUpper2 = na
+
+// Symbol: BABA
+if syminfo.ticker == "BABA"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 73.80858170748587
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=#eb8704, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=#eb8704, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 70.01141829251412
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=#eb8704, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=#eb8704, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 69.23296362592168
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 70.69673959171516
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 72.16051555750865
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 73.62429152330213
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 75.08806748909561
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+// Symbol: PYPL
+if syminfo.ticker == "PYPL"
+    var label lbl_upper_value = na
+    label.delete(lbl_upper_value)
+    y_upper_value := 60.212619766708755
+    line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=#eb8704, width = 2, extend = extend.both)
+    lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=#eb8704, style=label.style_none, size=size.small)
+
+    var label lbl_lower_value = na
+    label.delete(lbl_lower_value)
+    y_lower_value := 56.507380233291244
+    line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=#eb8704, width = 2, extend = extend.both)
+    lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=#eb8704, style=label.style_none, size=size.small)
+
+    var label lbl_PLower2 = na
+    label.delete(lbl_PLower2)
+    y_PLower2 := 55.897224681399265
+    line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PLower1 = na
+    label.delete(lbl_PLower1)
+    y_PLower1 := 57.24675371094015
+    line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PMean = na
+    label.delete(lbl_PMean)
+    y_PMean := 58.59628274048103
+    line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
+    lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper1 = na
+    label.delete(lbl_PUpper1)
+    y_PUpper1 := 59.94581177002191
+    line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
+
+    var label lbl_PUpper2 = na
+    label.delete(lbl_PUpper2)
+    y_PUpper2 := 61.295340799562794
+    line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
+    lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
