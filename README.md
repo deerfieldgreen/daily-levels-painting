@@ -1,4 +1,6 @@
 # daily-levels-panting
 
 ## Description
-Updates daily range levels and save the pine script in daily_range_pine.txt
+1) Receives webhook from QC
+2) Processes the data
+3) Sends the updated data to txt file stored in this github repo -> daily_range_pine.txt

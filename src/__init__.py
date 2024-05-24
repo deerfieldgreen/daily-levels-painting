@@ -1,3 +1,6 @@
 # Author: ABHISHEK GUPTA <abhishek@quantgrade.com>
 
-# Purpose:
+import dotenv
+dotenv.load_dotenv()
+
+from .utils import *

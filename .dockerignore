@@ -1,0 +1,10 @@
+daily_range_pine.txt
+*.md
+*.gitignore
+*.env
+*.idea
+*.git
+
+/archive/
+/credentials/
+/tests/

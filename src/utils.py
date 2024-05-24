@@ -1,14 +1,12 @@
+# Purpose: Define util functions for the project
+# Author: ABHISHEK GUPTA <abhishek@quantgrade.com>
 
 import numpy as np
 import pandas as pd
 import yaml
 from datetime import datetime, timedelta
+from src import *
 
-
-def load_config(path):
-    with open(path, "r") as f:
-        config = yaml.load(f, yaml.FullLoader)
-    return config
 
 
 def download_gsheet(gspread_client, config, dataPath):
