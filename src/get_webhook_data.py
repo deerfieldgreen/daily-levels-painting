@@ -88,6 +88,12 @@ col_prediction = [
     "PUpper1",
     "PUpper2",
     "PUpper3",
+    "straddle_pct_sma10",
+    "straddle_pct_sma20",
+    "straddle_pct_sma30",
+    "straddle_pct_sma50",
+    "implied_vol_rank",
+    "implied_vol_percentile"
 ]
 
 

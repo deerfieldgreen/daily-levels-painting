@@ -8,7 +8,6 @@ from datetime import datetime, timedelta
 from src import *
 
 
-
 def download_gsheet(gspread_client, config, dataPath):
     workbook = gspread_client.open_by_key(config['spreadsheet_id'])
     worksheet = workbook.worksheet(config['worksheet_name'])
@@ -17,14 +16,15 @@ def download_gsheet(gspread_client, config, dataPath):
     headers = data.pop(0)
     df = pd.DataFrame(data, columns=headers)
 
-    df.replace('\$', '',regex=True, inplace=True)
-    df.replace('\,', '',regex=True, inplace=True)
+    df.replace('\$', '', regex=True, inplace=True)
+    df.replace('\,', '', regex=True, inplace=True)
     return df
 
 
 def create_pine_script(df):
     pine_script = []
-    pine_script.append('// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/')
+    pine_script.append(
+        '// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/')
     pine_script.append('// © deerfieldgreen')
     pine_script.append('')
     pine_script.append('//@version=5')
@@ -48,11 +48,38 @@ def create_pine_script(df):
             pine_script.append(f'    var label lbl_{level} = na')
             pine_script.append(f'    label.delete(lbl_{level})')
             pine_script.append(f'    y_{level} := {y_level}')
-            pine_script.append(f'    line.new(x1=bar_index, y1=y_{level}, x2=bar_index+1, y2=y_{level}, color={color}, width = 2, extend = extend.both)')
-            pine_script.append(f'    lbl_{level} := label.new({xloc}, y_{level}, text="{level}", textcolor={color}, style=label.style_none, size=size.small)')
+            pine_script.append(
+                f'    line.new(x1=bar_index, y1=y_{level}, x2=bar_index+1, y2=y_{level}, color={color}, width = 2, extend = extend.both)')
+            pine_script.append(
+                f'    lbl_{level} := label.new({xloc}, y_{level}, text="{level}", textcolor={color}, style=label.style_none, size=size.small)')
             pine_script.append('')
 
-    combined =  '\n'.join(pine_script)
+        # Note with SMA details
+        anchoredBarIndex = 10  # Replace this with the specific bar index you want
+        anchoredPriceLevel = round(row['PUpper2'] * 1.005, 2)  # Replace this with the specific price level you want
+        note = (f"SMA10 - {row['straddle_pct_sma10']}%\\n"
+                f"SMA20 - {row['straddle_pct_sma20']}%\\n"
+                f"SMA30 - {row['straddle_pct_sma30']}%\\n"
+                f"SMA50 - {row['straddle_pct_sma50']}%\\n\\n"
+                f"IV Rank - {row['implied_vol_rank']}%\\n"
+                f"IV Percent - {row['implied_vol_percentile']}%")
+
+        pine_script.append(f'    var int anchoredBarIndex = {anchoredBarIndex}')
+        pine_script.append(f'    var float anchoredPriceLevel = {anchoredPriceLevel}')
+        pine_script.append('')
+        pine_script.append(f'    var label myLabel = na')
+        pine_script.append(f'    var string note = "{note}"')
+        pine_script.append('')
+        pine_script.append(f'    if (bar_index == anchoredBarIndex)')
+        pine_script.append(
+            '        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)')
+        pine_script.append('')
+        pine_script.append('    if not na(myLabel)')
+        pine_script.append('        label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)')
+        pine_script.append('        label.set_text(id=myLabel, text=note)')
+        pine_script.append('')
+
+    combined = '\n'.join(pine_script)
 
     # Save to notepad file
     with open('daily_range_pine.txt', 'w') as file:
@@ -62,7 +89,6 @@ def create_pine_script(df):
 
 
 if __name__ == '__main__':
-
     df = download_gsheet()
     pine_script = create_pine_script(df)
     print(pine_script)
