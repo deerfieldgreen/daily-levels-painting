@@ -1,6 +1,6 @@
 # Author: ABHISHEK GUPTA <abhishek@quantgrade.com>
 
-# Purpose:
+# Purpose: To test the create_pine_script function
 
 # test_utils.py
 import pytest

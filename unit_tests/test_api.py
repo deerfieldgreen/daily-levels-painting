@@ -1,6 +1,6 @@
 # Author: ABHISHEK GUPTA <abhishek@quantgrade.com>
 
-# Purpose:
+# Purpose: To test api by sending a post request to the api
 
 import numpy as np
 import pandas as pd
