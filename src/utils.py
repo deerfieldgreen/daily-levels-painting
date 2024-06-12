@@ -57,12 +57,12 @@ def create_pine_script(df):
         # Note with SMA details
         anchoredBarIndex = 10  # Replace this with the specific bar index you want
         anchoredPriceLevel = round(row['PUpper2'] * 1.005, 2)  # Replace this with the specific price level you want
-        note = (f"SMA10 - {row['straddle_pct_sma10']}%\\n"
-                f"SMA20 - {row['straddle_pct_sma20']}%\\n"
-                f"SMA30 - {row['straddle_pct_sma30']}%\\n"
-                f"SMA50 - {row['straddle_pct_sma50']}%\\n\\n"
-                f"IV Rank - {row['implied_vol_rank']}%\\n"
-                f"IV Percent - {row['implied_vol_percentile']}%")
+        note = (f"SMA10 - {round(row['straddle_pct_sma10']*100,3)}%\\n"
+                f"SMA20 - {round(row['straddle_pct_sma20']*100,3)}%\\n"
+                f"SMA30 - {round(row['straddle_pct_sma30']*100,3)}%\\n"
+                f"SMA50 - {round(row['straddle_pct_sma50']*100,3)}%\\n\\n"
+                f"IV Rank - {round(row['implied_vol_rank']*100,3)}%\\n"
+                f"IV Percent - {round(row['implied_vol_percentile']*100,3)}%")
 
         pine_script.append(f'    var int anchoredBarIndex = {anchoredBarIndex}')
         pine_script.append(f'    var float anchoredPriceLevel = {anchoredPriceLevel}')

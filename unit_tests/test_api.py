@@ -26,7 +26,7 @@ from copy import deepcopy
 import requests
 import json
 
-url = 'https://daily-levels-painting-fvnqwgrq6q-uc.a.run.app'
+url = 'https://daily-levels-painting-test-fvnqwgrq6q-uc.a.run.app'
 # url = 'https://5e80-34-122-239-102.ngrok-free.app/'
 res = requests.get(url)
 print(res.text)
@@ -71,7 +71,7 @@ res = requests.post(url)
 print(res.text)
 
 
-url = 'https://daily-levels-painting-fvnqwgrq6q-uc.a.run.app/webhook'
+url = 'https://daily-levels-painting-test-fvnqwgrq6q-uc.a.run.app/webhook'
 # url = 'http://localhost:8080/webhook'
 prediction_output_list = [
     # {'ticker': 'QQQ', 'datetime': '2024-03-07 09:39:00.100058', 'spot_price': 443.04, 'straddle_value': 5.52, 'straddle_pct_value': 0.01245937161430119, 'past_straddle_value': 2.573225521540213, 'past_straddle_pct_value': 0.00646344209941568, 'past_straddle_value_std': 0.49780409276880244, 'past_straddle_pct_value_std': 0.0014230299405164398, 'upper_value': 448.56, 'lower_value': 437.52000000000004, 'PMedian': 443.2716252104225, 'PRange': 2.8173025452365312, 'PSkew': -0.013217239721080694, 'PVol': 8.34756309699713, 'PSkewAdjustment': -0.037236963107202016, 'PMean': 443.3088621735297, 'PUpper1': 451.6564252705268, 'PLower1': 434.96129907653255, 'PUpper2': 460.00398836752396, 'PLower2': 426.6137359795354, 'PUpper3': 468.3515514645211, 'PLower3': 418.2661728825383},
