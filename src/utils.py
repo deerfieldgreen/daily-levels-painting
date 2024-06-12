@@ -72,7 +72,9 @@ def create_pine_script(df):
         pine_script.append('')
         pine_script.append(f'    if (bar_index == anchoredBarIndex)')
         pine_script.append(
-            '        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)')
+            '        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#6888ff4a, textcolor=#fffffff1, yloc=yloc.price)')
+##  myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)')
+##  color=#6888ff4a, textcolor=#fffffff1
         pine_script.append('')
         pine_script.append('    if not na(myLabel)')
         pine_script.append('        label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)')
