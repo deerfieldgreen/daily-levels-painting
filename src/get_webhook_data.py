@@ -145,7 +145,7 @@ async def webhook(r: InputRequest):
 
             repo.update_file(
                 file.path,
-                f"Updated file for {datetime.today().date()}",
+                f"Updated daily_range_pine.txt for {datetime.today().date()}",
                 pine_script,
                 file.sha,
             )
