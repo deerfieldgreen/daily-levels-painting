@@ -25,6 +25,7 @@ general_setting = {
 #2024.05.20 - New Deploy
 # Base URL - https://daily-levels-painting-fvnqwgrq6q-uc.a.run.app
 # dailyrange.deerfieldgreen.com = CNAME in GoDaddy DNS - kevin.stoll@deerfieldgreen.com
+# the auth "key" is embedded in the configuration of GCP CloudRun environment
    "url": "https://dailyrange.deerfieldgreen.com/webhook",
    "auth": "siycfsYts$dr7kv135bd&",
 
