@@ -68,7 +68,9 @@ general_setting = {
 ## Stock Splits
 - we needed to account for stock splits in the universe set. the price changes based on the ratio of split 2:1 or 4:1, whatever. 
 - The quantconnect code pulls from another github repository () for this list, back 5 years (60 months * 30.5 days to be exact)
-``` data = self.download("https://raw.githubusercontent.com/deerfieldgreen/yfinance-scaling-system/refs/heads/main/data/stock_splits_data.csv")
+
+``` 
+data = self.download("https://raw.githubusercontent.com/deerfieldgreen/yfinance-scaling-system/refs/heads/main/data/stock_splits_data.csv")
 ```
 
 ## Flow
