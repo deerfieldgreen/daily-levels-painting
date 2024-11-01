@@ -13,7 +13,8 @@
 - There are 5 prediction levels and 2 straddle levels
 - There are a set of Straddle Percent SMAs (10-50)
 - You can see how these are presented in the screenshot below.
-- this code snippet is from quantconnect/main.py (line #450)
+- this code snippet is from quantconnect/main.py (line #450) https://github.com/deerfieldgreen/daily-levels-painting/blob/6f461fc562e6f59372bac5bcdbb605bed82ae2a2/quantconnect/main.py#L450
+
 ```
 
                     prediction_dict = {}
