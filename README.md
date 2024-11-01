@@ -1,7 +1,9 @@
 # daily-levels-panting
-Updates daily range levels and save the pine script in daily_range_pine.txt
-We need to create a pine script for TradingView to "paint" the levels each day, to automated creating 8 levels by 8 symbols.
-In tradingview, you add the script to the Pine Editor, Save and Add to Chart, as an indicator. 
+
+-Updates daily range levels and save the pine script in daily_range_pine.txt
+-We need to create a pine script for TradingView to "paint" the levels each day, to automated creating 8 levels by 8 symbols.
+-In tradingview, you add the script to the Pine Editor, Save and Add to Chart, as an indicator. 
+
 
 ## Flow
 1) Receives webhook from QC
@@ -10,3 +12,13 @@ In tradingview, you add the script to the Pine Editor, Save and Add to Chart, as
 
 
 
+## Code layout
+- QuantConnect 
+- Docker container code 
+- WebHook running in GCP CloudRun
+
+
+
+## TradingView Screenshot
+
+![Screenshot of TradingView in $META.](images/META_2024-10-31_22-52-47_a1298.png)
