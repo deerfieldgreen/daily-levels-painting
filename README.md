@@ -5,7 +5,7 @@
 - In tradingview, you add the script to the Pine Editor, Save and Add to Chart, as an indicator. 
 
 ## How to use Daily Levels
-- 
+- COMPLETE ME 
 
 
 ## What each level means
@@ -13,6 +13,7 @@
 - There are 5 prediction levels and 2 straddle levels
 - There are a set of Straddle Percent SMAs (10-50)
 - You can see how these are presented in the screenshot below.
+- this code snippet is from quantconnect/main.py (line #450)
 ```
 
                     prediction_dict = {}
