@@ -133,7 +133,7 @@ class DailyRangeAlgo(QCAlgorithm):
         self.data_init_dict = {}
         self.start_datetime_dict = {}    
         if self.general_setting["use_init_data"]:
-            ticker_data_list = pickle.loads(bytes(self.ObjectStore.ReadBytes(f"MODEL_DATA_{self.model_name_init}"))) 
+            ticker_data_list = pickle.loads(bytes(self.ObjectStore.ReadBytes(f"DAILY_RANGE/MODEL_DATA_{self.model_name_init}"))) 
             for ticker in self.general_setting["tickers"]:
                 data_df = pd.DataFrame(ticker_data_list[ticker])
                 self.start_datetime_dict[ticker] = data_df['datetime'].min()
@@ -503,9 +503,9 @@ class DailyRangeAlgo(QCAlgorithm):
                         self.prediction_output_list += [prediction_dict]
 
                 if self.TO_SAVE_DATA:
-                    self.ObjectStore.SaveBytes(f"MODEL_DATA_{self.model_name}", pickle.dumps(self.ticker_data_list))
+                    self.ObjectStore.SaveBytes(f"DAILY_RANGE/MODEL_DATA_{self.model_name}", pickle.dumps(self.ticker_data_list))
                     # self.Log(f"{str(self.Time)}: Model Data Saved At: MODEL_DATA_{self.model_name}")
-                    self.ObjectStore.SaveBytes(f"PREDICTION_DATA_{self.model_name}", pickle.dumps(self.ticker_prediction_list))
+                    self.ObjectStore.SaveBytes(f"DAILY_RANGE/PREDICTION_DATA_{self.model_name}", pickle.dumps(self.ticker_prediction_list))
                     # self.Log(f"{str(self.Time)}: Prediction Data Saved At: PREDICTION_DATA_{self.model_name}")
 
 
