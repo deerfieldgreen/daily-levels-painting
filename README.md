@@ -82,7 +82,7 @@ data = self.download("https://raw.githubusercontent.com/deerfieldgreen/yfinance-
 
 
 ## Code layout
-- QuantConnect 
+
 - Docker container code 
 - WebHook running in GCP CloudRun
 
