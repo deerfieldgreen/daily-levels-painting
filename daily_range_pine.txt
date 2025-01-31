@@ -16,51 +16,51 @@ var float y_PUpper2 = na
 if syminfo.ticker == "QQQ"
     var label lbl_upper_value = na
     label.delete(lbl_upper_value)
-    y_upper_value := 530.72
+    y_upper_value := 534.1750000000001
     line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_lower_value = na
     label.delete(lbl_lower_value)
-    y_lower_value := 515.28
+    y_lower_value := 521.525
     line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_PLower2 = na
     label.delete(lbl_PLower2)
-    y_PLower2 := 490.71763
+    y_PLower2 := 501.88655
     line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PLower1 = na
     label.delete(lbl_PLower1)
-    y_PLower1 := 507.4899
+    y_PLower1 := 514.58095
     line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PMean = na
     label.delete(lbl_PMean)
-    y_PMean := 524.26217
+    y_PMean := 527.27535
     line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
     lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper1 = na
     label.delete(lbl_PUpper1)
-    y_PUpper1 := 541.03444
+    y_PUpper1 := 539.96975
     line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper2 = na
     label.delete(lbl_PUpper2)
-    y_PUpper2 := 557.80671
+    y_PUpper2 := 552.66415
     line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var int anchoredBarIndex = 10
-    var float anchoredPriceLevel = 560.6
+    var float anchoredPriceLevel = 555.43
 
     var label myLabel = na
-    var string note = "SMA10 - 0.832%\nSMA20 - 0.801%\nSMA30 - 0.738%\nSMA50 - 0.697%\n\nIV Rank - 15.4%\nIV Percent - 67.4%"
+    var string note = "SMA10 - 0.766%\nSMA20 - 0.776%\nSMA30 - 0.731%\nSMA50 - 0.691%\n\nIV Rank - 12.1%\nIV Percent - 47.0%"
 
     if (bar_index == anchoredBarIndex)
         myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
@@ -73,51 +73,51 @@ if syminfo.ticker == "QQQ"
 if syminfo.ticker == "SPY"
     var label lbl_upper_value = na
     label.delete(lbl_upper_value)
-    y_upper_value := 609.155
+    y_upper_value := 611.865
     line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_lower_value = na
     label.delete(lbl_lower_value)
-    y_lower_value := 598.3050000000001
+    y_lower_value := 602.935
     line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_PLower2 = na
     label.delete(lbl_PLower2)
-    y_PLower2 := 586.52017
+    y_PLower2 := 591.90837
     line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PLower1 = na
     label.delete(lbl_PLower1)
-    y_PLower1 := 595.5853000000001
+    y_PLower1 := 599.34582
     line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PMean = na
     label.delete(lbl_PMean)
-    y_PMean := 604.65043
+    y_PMean := 606.78327
     line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
     lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper1 = na
     label.delete(lbl_PUpper1)
-    y_PUpper1 := 613.71556
+    y_PUpper1 := 614.22072
     line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper2 = na
     label.delete(lbl_PUpper2)
-    y_PUpper2 := 622.78069
+    y_PUpper2 := 621.65817
     line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var int anchoredBarIndex = 10
-    var float anchoredPriceLevel = 625.89
+    var float anchoredPriceLevel = 624.77
 
     var label myLabel = na
-    var string note = "SMA10 - 0.589%\nSMA20 - 0.574%\nSMA30 - 0.523%\nSMA50 - 0.47%\n\nIV Rank - 17.1%\nIV Percent - 57.5%"
+    var string note = "SMA10 - 0.538%\nSMA20 - 0.566%\nSMA30 - 0.519%\nSMA50 - 0.467%\n\nIV Rank - 13.8%\nIV Percent - 45.4%"
 
     if (bar_index == anchoredBarIndex)
         myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
@@ -130,51 +130,51 @@ if syminfo.ticker == "SPY"
 if syminfo.ticker == "NVDA"
     var label lbl_upper_value = na
     label.delete(lbl_upper_value)
-    y_upper_value := 128.22039999999998
+    y_upper_value := 127.525
     line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_lower_value = na
     label.delete(lbl_lower_value)
-    y_lower_value := 116.19959999999999
+    y_lower_value := 120.215
     line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_PLower2 = na
     label.delete(lbl_PLower2)
-    y_PLower2 := 126.52264000000001
+    y_PLower2 := 132.54161000000002
     line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PLower1 = na
     label.delete(lbl_PLower1)
-    y_PLower1 := 130.15040000000002
+    y_PLower1 := 136.30342000000002
     line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PMean = na
     label.delete(lbl_PMean)
-    y_PMean := 133.77816
+    y_PMean := 140.06523
     line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
     lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper1 = na
     label.delete(lbl_PUpper1)
-    y_PUpper1 := 137.40592
+    y_PUpper1 := 143.82704
     line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper2 = na
     label.delete(lbl_PUpper2)
-    y_PUpper2 := 141.03368
+    y_PUpper2 := 147.58885
     line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var int anchoredBarIndex = 10
-    var float anchoredPriceLevel = 141.74
+    var float anchoredPriceLevel = 148.33
 
     var label myLabel = na
-    var string note = "SMA10 - 2.052%\nSMA20 - 1.85%\nSMA30 - 1.856%\nSMA50 - 1.895%\n\nIV Rank - 61.5%\nIV Percent - 90.0%"
+    var string note = "SMA10 - 1.785%\nSMA20 - 1.75%\nSMA30 - 1.779%\nSMA50 - 1.848%\n\nIV Rank - 57.8%\nIV Percent - 88.5%"
 
     if (bar_index == anchoredBarIndex)
         myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
@@ -187,51 +187,51 @@ if syminfo.ticker == "NVDA"
 if syminfo.ticker == "TSLA"
     var label lbl_upper_value = na
     label.delete(lbl_upper_value)
-    y_upper_value := 431.4556
+    y_upper_value := 420.355
     line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_lower_value = na
     label.delete(lbl_lower_value)
-    y_lower_value := 376.12440000000004
+    y_lower_value := 393.505
     line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_PLower2 = na
     label.delete(lbl_PLower2)
-    y_PLower2 := 374.84627
+    y_PLower2 := 373.10247
     line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PLower1 = na
     label.delete(lbl_PLower1)
-    y_PLower1 := 388.18577
+    y_PLower1 := 391.83755
     line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PMean = na
     label.delete(lbl_PMean)
-    y_PMean := 401.52527
+    y_PMean := 410.57263
     line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
     lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper1 = na
     label.delete(lbl_PUpper1)
-    y_PUpper1 := 414.86476999999996
+    y_PUpper1 := 429.30771
     line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper2 = na
     label.delete(lbl_PUpper2)
-    y_PUpper2 := 428.20426999999995
+    y_PUpper2 := 448.04279
     line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var int anchoredBarIndex = 10
-    var float anchoredPriceLevel = 430.35
+    var float anchoredPriceLevel = 450.28
 
     var label myLabel = na
-    var string note = "SMA10 - 3.026%\nSMA20 - 2.804%\nSMA30 - 2.799%\nSMA50 - 2.735%\n\nIV Rank - 38.4%\nIV Percent - 84.9%"
+    var string note = "SMA10 - 2.772%\nSMA20 - 2.702%\nSMA30 - 2.715%\nSMA50 - 2.652%\n\nIV Rank - 26.9%\nIV Percent - 64.7%"
 
     if (bar_index == anchoredBarIndex)
         myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
@@ -244,51 +244,51 @@ if syminfo.ticker == "TSLA"
 if syminfo.ticker == "META"
     var label lbl_upper_value = na
     label.delete(lbl_upper_value)
-    y_upper_value := 725.9823
+    y_upper_value := 702.695
     line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_lower_value = na
     label.delete(lbl_lower_value)
-    y_lower_value := 653.3977000000001
+    y_lower_value := 679.745
     line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_PLower2 = na
     label.delete(lbl_PLower2)
-    y_PLower2 := 683.43117
+    y_PLower2 := 691.37181
     line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PLower1 = na
     label.delete(lbl_PLower1)
-    y_PLower1 := 711.41556
+    y_PLower1 := 703.25329
     line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PMean = na
     label.delete(lbl_PMean)
-    y_PMean := 739.39995
+    y_PMean := 715.13477
     line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
     lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper1 = na
     label.delete(lbl_PUpper1)
-    y_PUpper1 := 767.38434
+    y_PUpper1 := 727.01625
     line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper2 = na
     label.delete(lbl_PUpper2)
-    y_PUpper2 := 795.36873
+    y_PUpper2 := 738.89773
     line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var int anchoredBarIndex = 10
-    var float anchoredPriceLevel = 799.35
+    var float anchoredPriceLevel = 742.59
 
     var label myLabel = na
-    var string note = "SMA10 - 1.87%\nSMA20 - 1.52%\nSMA30 - 1.454%\nSMA50 - 1.338%\n\nIV Rank - 49.5%\nIV Percent - 79.9%"
+    var string note = "SMA10 - 1.629%\nSMA20 - 1.426%\nSMA30 - 1.383%\nSMA50 - 1.296%\n\nIV Rank - 11.5%\nIV Percent - 54.1%"
 
     if (bar_index == anchoredBarIndex)
         myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
@@ -301,51 +301,51 @@ if syminfo.ticker == "META"
 if syminfo.ticker == "AMZN"
     var label lbl_upper_value = na
     label.delete(lbl_upper_value)
-    y_upper_value := 240.0609
+    y_upper_value := 241.33
     line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_lower_value = na
     label.delete(lbl_lower_value)
-    y_lower_value := 230.8191
+    y_lower_value := 233.96
     line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_PLower2 = na
     label.delete(lbl_PLower2)
-    y_PLower2 := 229.76726
+    y_PLower2 := 229.78008
     line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PLower1 = na
     label.delete(lbl_PLower1)
-    y_PLower1 := 235.04723
+    y_PLower1 := 234.13702999999998
     line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PMean = na
     label.delete(lbl_PMean)
-    y_PMean := 240.3272
+    y_PMean := 238.49398
     line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
     lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper1 = na
     label.delete(lbl_PUpper1)
-    y_PUpper1 := 245.60717
+    y_PUpper1 := 242.85093
     line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper2 = na
     label.delete(lbl_PUpper2)
-    y_PUpper2 := 250.88714000000002
+    y_PUpper2 := 247.20788
     line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var int anchoredBarIndex = 10
-    var float anchoredPriceLevel = 252.14
+    var float anchoredPriceLevel = 248.44
 
     var label myLabel = na
-    var string note = "SMA10 - 1.239%\nSMA20 - 1.158%\nSMA30 - 1.174%\nSMA50 - 1.16%\n\nIV Rank - 46.4%\nIV Percent - 80.8%"
+    var string note = "SMA10 - 1.188%\nSMA20 - 1.15%\nSMA30 - 1.157%\nSMA50 - 1.152%\n\nIV Rank - 46.7%\nIV Percent - 82.6%"
 
     if (bar_index == anchoredBarIndex)
         myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
@@ -358,51 +358,51 @@ if syminfo.ticker == "AMZN"
 if syminfo.ticker == "BABA"
     var label lbl_upper_value = na
     label.delete(lbl_upper_value)
-    y_upper_value := 99.3097
+    y_upper_value := 104.51
     line.new(x1=bar_index, y1=y_upper_value, x2=bar_index+1, y2=y_upper_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_upper_value := label.new(last_bar_index-1, y_upper_value, text="upper_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_lower_value = na
     label.delete(lbl_lower_value)
-    y_lower_value := 95.6503
+    y_lower_value := 99.11
     line.new(x1=bar_index, y1=y_lower_value, x2=bar_index+1, y2=y_lower_value, color=#eb8704, width = 2, extend = extend.both)
     lbl_lower_value := label.new(last_bar_index-1, y_lower_value, text="lower_value", textcolor=#eb8704, style=label.style_none, size=size.small)
 
     var label lbl_PLower2 = na
     label.delete(lbl_PLower2)
-    y_PLower2 := 103.33134
+    y_PLower2 := 116.50374
     line.new(x1=bar_index, y1=y_PLower2, x2=bar_index+1, y2=y_PLower2, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower2 := label.new(last_bar_index, y_PLower2, text="PLower2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PLower1 = na
     label.delete(lbl_PLower1)
-    y_PLower1 := 107.11000999999999
+    y_PLower1 := 122.22878
     line.new(x1=bar_index, y1=y_PLower1, x2=bar_index+1, y2=y_PLower1, color=color.purple, width = 2, extend = extend.both)
     lbl_PLower1 := label.new(last_bar_index, y_PLower1, text="PLower1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PMean = na
     label.delete(lbl_PMean)
-    y_PMean := 110.88868
+    y_PMean := 127.95382
     line.new(x1=bar_index, y1=y_PMean, x2=bar_index+1, y2=y_PMean, color=color.purple, width = 2, extend = extend.both)
     lbl_PMean := label.new(last_bar_index, y_PMean, text="PMean", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper1 = na
     label.delete(lbl_PUpper1)
-    y_PUpper1 := 114.66735
+    y_PUpper1 := 133.67886
     line.new(x1=bar_index, y1=y_PUpper1, x2=bar_index+1, y2=y_PUpper1, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper1 := label.new(last_bar_index, y_PUpper1, text="PUpper1", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var label lbl_PUpper2 = na
     label.delete(lbl_PUpper2)
-    y_PUpper2 := 118.44601999999999
+    y_PUpper2 := 139.4039
     line.new(x1=bar_index, y1=y_PUpper2, x2=bar_index+1, y2=y_PUpper2, color=color.purple, width = 2, extend = extend.both)
     lbl_PUpper2 := label.new(last_bar_index, y_PUpper2, text="PUpper2", textcolor=color.purple, style=label.style_none, size=size.small)
 
     var int anchoredBarIndex = 10
-    var float anchoredPriceLevel = 119.04
+    var float anchoredPriceLevel = 140.1
 
     var label myLabel = na
-    var string note = "SMA10 - 1.473%\nSMA20 - 1.335%\nSMA30 - 1.385%\nSMA50 - 1.57%\n\nIV Rank - 58.7%\nIV Percent - 86.7%"
+    var string note = "SMA10 - 1.517%\nSMA20 - 1.374%\nSMA30 - 1.376%\nSMA50 - 1.55%\n\nIV Rank - 84.7%\nIV Percent - 97.2%"
 
     if (bar_index == anchoredBarIndex)
         myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
