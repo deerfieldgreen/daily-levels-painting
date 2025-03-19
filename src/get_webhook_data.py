@@ -12,6 +12,7 @@ from fastapi import FastAPI
 from datetime import datetime
 import datetime as dt
 import warnings
+import io
 
 warnings.filterwarnings("ignore")
 pd.set_option("display.max_columns", None)  # to ensure console display all columns
@@ -66,6 +67,16 @@ class InputRequest(BaseModel):
 ## Variables
 
 token = os.environ.get("GIT_TOKEN")
+if not token:
+    try:
+        secret_id = "Daily_Range_GITHUB_TOKEN"
+        project_id = "367674009031"
+        token = access_secret_version(project_id, secret_id)
+        print(f"# {dt.datetime.utcnow()}: Successfully retrieved GitHub token from Secret Manager")
+    except Exception as e:
+        print(f"# {dt.datetime.utcnow()}: Error retrieving GitHub token from Secret Manager: {e}")
+        token = None
+
 g = Github(token)
 repo = g.get_repo(
     "deerfieldgreen/daily-levels-painting"
@@ -158,11 +169,56 @@ async def webhook(r: InputRequest):
             time.sleep(30)
         if counter > 3:
             break
+    
+    # Create and upload CSV file to GitHub
+    current_date = datetime.today().date().strftime("%Y-%m-%d")
+    csv_filename = f"data_{current_date}.csv"
+    csv_path = f"data/{csv_filename}"
+    
+    counter = 1
+    has_updated_csv = False
+    while not has_updated_csv and counter <= 3:
+        try:
+            # Convert DataFrame to CSV string
+            csv_buffer = io.StringIO()
+            data_df.to_csv(csv_buffer, index=False)
+            csv_content = csv_buffer.getvalue()
+            
+            # Check if file already exists in repo
+            try:
+                csv_file = repo.get_contents(csv_path)
+                # File exists, update it
+                repo.update_file(
+                    csv_path,
+                    f"Updated {csv_filename} for {current_date}",
+                    csv_content,
+                    csv_file.sha,
+                )
+            except Exception:
+                # File doesn't exist, create it
+                repo.create_file(
+                    csv_path,
+                    f"Created {csv_filename} for {current_date}",
+                    csv_content,
+                )
+            
+            has_updated_csv = True
+            print(f"# {dt.datetime.utcnow()}: CSV file {csv_filename} uploaded to GitHub")
+        except Exception as e:
+            print(e)
+            print(f"# {dt.datetime.utcnow()}: Failed CSV Update Attempt {counter}")
+            counter += 1
+            time.sleep(30)
+    
     if has_updated_github:
         print(f"# {dt.datetime.utcnow()}: Pine Updated on Github")
         print(data_df)
     else:
         print(f"# {dt.datetime.utcnow()}: Failed to update Pine on Github !!")
+    
+    if not has_updated_csv:
+        print(f"# {dt.datetime.utcnow()}: Failed to upload CSV to Github !!")
+    
     sys.stdout.flush()
 
     return {"success": True}, 200

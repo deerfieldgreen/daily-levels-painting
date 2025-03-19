@@ -2,29 +2,17 @@
 
 # Purpose: To test api by sending a post request to the api
 
-import numpy as np
-import pandas as pd
-import os
-import sys
-import time
-from tenacity import retry, stop_after_attempt, wait_random_exponential
-from pydantic import BaseModel
-from starlette.middleware.cors import CORSMiddleware
-from fastapi import FastAPI
-from datetime import datetime, timedelta
-from typing import Optional
 import warnings
+
+import pandas as pd
+
 warnings.filterwarnings('ignore')
 pd.set_option('display.max_columns', None) # to ensure console display all columns
 pd.set_option('display.float_format', '{:0.3f}'.format)
 pd.set_option('display.max_row', 50)
-from pathlib import Path
-import joblib
-from copy import deepcopy
-
 
 import requests
-import json
+from unit_tests.data import data_thirteen, sample_historical_data_dict
 
 url = 'https://daily-levels-painting-test-fvnqwgrq6q-uc.a.run.app'
 # url = 'https://5e80-34-122-239-102.ngrok-free.app/'
@@ -36,9 +24,6 @@ url = 'https://daily-levels-painting-fvnqwgrq6q-uc.a.run.app/test'
 res = requests.post(url)
 print(res.text)
 
-
-from src.utils import download_gsheet, create_pine_script
-from unit_tests.data import data_thirteen
 url = 'https://5e80-34-122-239-102.ngrok-free.app/webhook'
 prediction_output_list = data_thirteen
 # prediction_output_list = [{"A": 5, "B": 7}, {"C": 4, "B": 8}]
@@ -72,7 +57,7 @@ print(res.text)
 
 
 url = 'https://daily-levels-painting-test-fvnqwgrq6q-uc.a.run.app/webhook'
-# url = 'http://localhost:8080/webhook'
+url = 'http://localhost:8080/webhook'
 prediction_output_list = [
     # {'ticker': 'QQQ', 'datetime': '2024-03-07 09:39:00.100058', 'spot_price': 443.04, 'straddle_value': 5.52, 'straddle_pct_value': 0.01245937161430119, 'past_straddle_value': 2.573225521540213, 'past_straddle_pct_value': 0.00646344209941568, 'past_straddle_value_std': 0.49780409276880244, 'past_straddle_pct_value_std': 0.0014230299405164398, 'upper_value': 448.56, 'lower_value': 437.52000000000004, 'PMedian': 443.2716252104225, 'PRange': 2.8173025452365312, 'PSkew': -0.013217239721080694, 'PVol': 8.34756309699713, 'PSkewAdjustment': -0.037236963107202016, 'PMean': 443.3088621735297, 'PUpper1': 451.6564252705268, 'PLower1': 434.96129907653255, 'PUpper2': 460.00398836752396, 'PLower2': 426.6137359795354, 'PUpper3': 468.3515514645211, 'PLower3': 418.2661728825383},
     {'ticker': 'SPY', 'datetime': '2024-03-07 09:39:00.100058', 'spot_price': 513.43, 'straddle_value': 4.275, 'straddle_pct_value': 0.008326354128118732, 'past_straddle_value': 2.1594637594604857, 'past_straddle_pct_value': 0.004658875404418762, 'past_straddle_value_std': 0.5067306798277208, 'past_straddle_pct_value_std': 0.0012263194547182063, 'upper_value': 517.7049999999999, 'lower_value': 509.155, 'PMedian': 514.2139540856421, 'PRange': 1.71250271494111, 'PSkew': -0.020273870410084428, 'PVol': 5.0740821183440294, 'PSkewAdjustment': -0.03471905811963382, 'PMean': 514.2486731437617, 'PUpper1': 519.3227552621057, 'PLower1': 509.17459102541767, 'PUpper2': 524.3968373804498, 'PLower2': 504.1005089070737, 'PUpper3': 529.4709194987938, 'PLower3': 499.0264267887296},
@@ -83,8 +68,24 @@ prediction_output_list = [
     # {'ticker': 'BABA', 'datetime': '2024-03-07 09:39:00.100058', 'spot_price': 71.91, 'straddle_value': 1.8985817074858802, 'straddle_pct_value': 0.026402193123152277, 'past_straddle_value': 1.1616644855021938, 'past_straddle_pct_value': 0.015243311335408944, 'past_straddle_value_std': 0.33857460515443016, 'past_straddle_pct_value_std': 0.004226810410869178, 'upper_value': 73.80858170748587, 'lower_value': 70.01141829251412, 'PMedian': 72.18820538278543, 'PRange': 0.49402438845530056, 'PSkew': 0.05604951076072272, 'PVol': 1.463775965793483, 'PSkewAdjustment': 0.02768982527678483, 'PMean': 72.16051555750865, 'PUpper1': 73.62429152330213, 'PLower1': 70.69673959171516, 'PUpper2': 75.08806748909561, 'PLower2': 69.23296362592168, 'PUpper3': 76.5518434548891, 'PLower3': 67.7691876601282},
     # {'ticker': 'PYPL', 'datetime': '2024-03-07 09:39:00.100058', 'spot_price': 58.36, 'straddle_value': 1.8526197667087543, 'straddle_pct_value': 0.031744684145112306, 'past_straddle_value': 1.0382232037773418, 'past_straddle_pct_value': 0.017694296419325756, 'past_straddle_value_std': 0.48140532760688215, 'past_straddle_pct_value_std': 0.00824641079631678, 'upper_value': 60.212619766708755, 'lower_value': 56.507380233291244, 'PMedian': 58.64256446511282, 'PRange': 0.4554660474700482, 'PSkew': 0.10161399491546214, 'PVol': 1.3495290295408835, 'PSkewAdjustment': 0.04628172463178711, 'PMean': 58.59628274048103, 'PUpper1': 59.94581177002191, 'PLower1': 57.24675371094015, 'PUpper2': 61.295340799562794, 'PLower2': 55.897224681399265, 'PUpper3': 62.64486982910368, 'PLower3': 54.547695651858376},
 ]
+
+
+# for large data
+url = 'http://localhost:8080/historical'
+url = 'http://localhost:8080/daily'
+url = 'https://historical-dailyrange.deerfieldgreen.com/historical'
+url = 'https://historical-dailyrange.deerfieldgreen.com/daily'
+
 data_dict = {}
 data_dict["auth"] = "siycfsYts$dr7kv135bd&"
 data_dict["prediction_output_list"] = prediction_output_list
+data_dict["prediction_output_list"] = data_thirteen
+# sample_historical_data_dict['webhook_payload'] = sample_historical_data_dict['webhook_payload']*200
+data_dict = sample_historical_data_dict
+data_dict["dataset_type"] = "prediction"
+data_dict["dataset_type"] = "model"
 res = requests.post(url, json=data_dict)
 print(res.text)
+
+
+
