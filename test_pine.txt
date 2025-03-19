@@ -60,10 +60,10 @@ if syminfo.ticker == "QQQ"
     var float anchoredPriceLevel = 461.71
 
     var label myLabel = na
-    var string note = "SMA10 - 0.00888%\nSMA20 - 0.00845%\nSMA30 - 0.00822%\nSMA50 - 0.00753%\n\nIV Rank - 0.1515%\nIV Percent - 0.0531%"
+    var string note = "SMA10 - 0.888%\nSMA20 - 0.845%\nSMA30 - 0.822%\nSMA50 - 0.753%\n\nIV Rank - 15.15%\nIV Percent - 5.31%"
 
     if (bar_index == anchoredBarIndex)
-        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)
+        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
 
     if not na(myLabel)
         label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)
@@ -117,10 +117,10 @@ if syminfo.ticker == "SPY"
     var float anchoredPriceLevel = 537.59
 
     var label myLabel = na
-    var string note = "SMA10 - 0.00739%\nSMA20 - 0.00658%\nSMA30 - 0.00646%\nSMA50 - 0.00561%\n\nIV Rank - 0.0915%\nIV Percent - 0.0796%"
+    var string note = "SMA10 - 0.739%\nSMA20 - 0.658%\nSMA30 - 0.646%\nSMA50 - 0.561%\n\nIV Rank - 9.15%\nIV Percent - 7.96%"
 
     if (bar_index == anchoredBarIndex)
-        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)
+        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
 
     if not na(myLabel)
         label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)
@@ -174,10 +174,10 @@ if syminfo.ticker == "NVDA"
     var float anchoredPriceLevel = 1005.48
 
     var label myLabel = na
-    var string note = "SMA10 - 0.03021%\nSMA20 - 0.02603%\nSMA30 - 0.02348%\nSMA50 - 0.02319%\n\nIV Rank - 0.4976%\nIV Percent - 0.7876%"
+    var string note = "SMA10 - 3.021%\nSMA20 - 2.603%\nSMA30 - 2.348%\nSMA50 - 2.319%\n\nIV Rank - 49.76%\nIV Percent - 78.76%"
 
     if (bar_index == anchoredBarIndex)
-        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)
+        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
 
     if not na(myLabel)
         label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)
@@ -231,10 +231,10 @@ if syminfo.ticker == "TSLA"
     var float anchoredPriceLevel = 183.98
 
     var label myLabel = na
-    var string note = "SMA10 - 0.02377%\nSMA20 - 0.02494%\nSMA30 - 0.02453%\nSMA50 - 0.02311%\n\nIV Rank - 0.1968%\nIV Percent - 0.3142%"
+    var string note = "SMA10 - 2.377%\nSMA20 - 2.494%\nSMA30 - 2.453%\nSMA50 - 2.311%\n\nIV Rank - 19.68%\nIV Percent - 31.42%"
 
     if (bar_index == anchoredBarIndex)
-        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)
+        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
 
     if not na(myLabel)
         label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)
@@ -288,10 +288,10 @@ if syminfo.ticker == "BABA"
     var float anchoredPriceLevel = 92.73
 
     var label myLabel = na
-    var string note = "SMA10 - 0.03055%\nSMA20 - 0.02149%\nSMA30 - 0.01823%\nSMA50 - 0.01594%\n\nIV Rank - 0.4366%\nIV Percent - 0.7389%"
+    var string note = "SMA10 - 3.055%\nSMA20 - 2.149%\nSMA30 - 1.823%\nSMA50 - 1.594%\n\nIV Rank - 43.66%\nIV Percent - 73.89%"
 
     if (bar_index == anchoredBarIndex)
-        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)
+        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
 
     if not na(myLabel)
         label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)
@@ -345,10 +345,10 @@ if syminfo.ticker == "META"
     var float anchoredPriceLevel = 490.24
 
     var label myLabel = na
-    var string note = "SMA10 - 0.01535%\nSMA20 - 0.0189%\nSMA30 - 0.01862%\nSMA50 - 0.01665%\n\nIV Rank - 0.0537%\nIV Percent - 0.1283%"
+    var string note = "SMA10 - 1.535%\nSMA20 - 1.89%\nSMA30 - 1.862%\nSMA50 - 1.665%\n\nIV Rank - 5.37%\nIV Percent - 12.83%"
 
     if (bar_index == anchoredBarIndex)
-        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)
+        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
 
     if not na(myLabel)
         label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)
@@ -402,10 +402,10 @@ if syminfo.ticker == "AMZN"
     var float anchoredPriceLevel = 192.67
 
     var label myLabel = na
-    var string note = "SMA10 - 0.01302%\nSMA20 - 0.01624%\nSMA30 - 0.01487%\nSMA50 - 0.01305%\n\nIV Rank - 0.0919%\nIV Percent - 0.1062%"
+    var string note = "SMA10 - 1.302%\nSMA20 - 1.624%\nSMA30 - 1.487%\nSMA50 - 1.305%\n\nIV Rank - 9.19%\nIV Percent - 10.62%"
 
     if (bar_index == anchoredBarIndex)
-        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)
+        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
 
     if not na(myLabel)
         label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)
@@ -459,10 +459,10 @@ if syminfo.ticker == "TLT"
     var float anchoredPriceLevel = 92.75
 
     var label myLabel = na
-    var string note = "SMA10 - 0.00888%\nSMA20 - 0.00754%\nSMA30 - 0.00699%\nSMA50 - 0.00641%\n\nIV Rank - 0.0329%\nIV Percent - 0.0265%"
+    var string note = "SMA10 - 0.888%\nSMA20 - 0.754%\nSMA30 - 0.699%\nSMA50 - 0.641%\n\nIV Rank - 3.29%\nIV Percent - 2.65%"
 
     if (bar_index == anchoredBarIndex)
-        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)
+        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
 
     if not na(myLabel)
         label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)
@@ -516,10 +516,10 @@ if syminfo.ticker == "GLD"
     var float anchoredPriceLevel = 228.18
 
     var label myLabel = na
-    var string note = "SMA10 - 0.01041%\nSMA20 - 0.00908%\nSMA30 - 0.00884%\nSMA50 - 0.00781%\n\nIV Rank - 0.6344%\nIV Percent - 0.9204%"
+    var string note = "SMA10 - 1.041%\nSMA20 - 0.908%\nSMA30 - 0.884%\nSMA50 - 0.781%\n\nIV Rank - 63.44%\nIV Percent - 92.04%"
 
     if (bar_index == anchoredBarIndex)
-        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)
+        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
 
     if not na(myLabel)
         label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)
@@ -573,10 +573,10 @@ if syminfo.ticker == "SLV"
     var float anchoredPriceLevel = 29.74
 
     var label myLabel = na
-    var string note = "SMA10 - 0.02168%\nSMA20 - 0.01761%\nSMA30 - 0.01681%\nSMA50 - 0.01477%\n\nIV Rank - 0.9251%\nIV Percent - 0.9912%"
+    var string note = "SMA10 - 2.168%\nSMA20 - 1.761%\nSMA30 - 1.681%\nSMA50 - 1.477%\n\nIV Rank - 92.51%\nIV Percent - 99.12%"
 
     if (bar_index == anchoredBarIndex)
-        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)
+        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
 
     if not na(myLabel)
         label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)
@@ -630,10 +630,10 @@ if syminfo.ticker == "EWZ"
     var float anchoredPriceLevel = 32.83
 
     var label myLabel = na
-    var string note = "SMA10 - 0.01336%\nSMA20 - 0.01229%\nSMA30 - 0.01202%\nSMA50 - 0.01117%\n\nIV Rank - 0.5396%\nIV Percent - 0.9735%"
+    var string note = "SMA10 - 1.336%\nSMA20 - 1.229%\nSMA30 - 1.202%\nSMA50 - 1.117%\n\nIV Rank - 53.96%\nIV Percent - 97.35%"
 
     if (bar_index == anchoredBarIndex)
-        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)
+        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
 
     if not na(myLabel)
         label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)
@@ -687,10 +687,10 @@ if syminfo.ticker == "IWM"
     var float anchoredPriceLevel = 211.06
 
     var label myLabel = na
-    var string note = "SMA10 - 0.01319%\nSMA20 - 0.01063%\nSMA30 - 0.01038%\nSMA50 - 0.00945%\n\nIV Rank - 0.259%\nIV Percent - 0.1327%"
+    var string note = "SMA10 - 1.319%\nSMA20 - 1.063%\nSMA30 - 1.038%\nSMA50 - 0.945%\n\nIV Rank - 25.9%\nIV Percent - 13.27%"
 
     if (bar_index == anchoredBarIndex)
-        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=color.rgb(232, 210, 10), textcolor=color.white, yloc=yloc.price)
+        myLabel := label.new(x=bar_index, y=anchoredPriceLevel, text=note, style=label.style_label_down, color=#fffc684a, textcolor=#fffffff1, yloc=yloc.price)
 
     if not na(myLabel)
         label.set_xy(id=myLabel, x=bar_index, y=anchoredPriceLevel)
