@@ -7,6 +7,17 @@ import yaml
 from datetime import datetime, timedelta
 from src import *
 
+from google.cloud import secretmanager
+
+# Access the GitHub token from Google Secret Manager
+def access_secret_version(project_id, secret_id, version_id="latest"):
+    """
+    Access the secret version from Google Secret Manager.
+    """
+    client = secretmanager.SecretManagerServiceClient()
+    name = f"projects/{project_id}/secrets/{secret_id}/versions/{version_id}"
+    response = client.access_secret_version(request={"name": name})
+    return response.payload.data.decode("UTF-8")
 
 def download_gsheet(gspread_client, config, dataPath):
     workbook = gspread_client.open_by_key(config['spreadsheet_id'])

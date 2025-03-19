@@ -266,3 +266,58 @@ data_thirteen = [{'ticker': 'QQQ',
   'straddle_pct_sma50': 0.00945,
   'implied_vol_rank': 0.259,
   'implied_vol_percentile': 0.1327}]
+
+sample_historical_data_dict = {
+    "auth": "siycfsYts$dr7kv135bd&",
+    "webhook_payload": [
+        {
+            "ticker": "AAPL",
+            "datetime": "2023-10-01T00:00:00",
+            "spot_price": 150.0,
+            "upper_value": 155.0,
+            "lower_value": 145.0,
+            "straddle_value": 5.0,
+            "past_straddle_value": 4.5,
+            "straddle_pct_value": 0.03,
+            "past_straddle_pct_value": 0.02,
+            "PLower3": 140.0,
+            "PLower2": 142.0,
+            "PLower1": 144.0,
+            "PMean": 150.0,
+            "PUpper1": 152.0,
+            "PUpper2": 154.0,
+            "PUpper3": 156.0,
+            "straddle_pct_sma10": 0.025,
+            "straddle_pct_sma20": 0.027,
+            "straddle_pct_sma30": 0.028,
+            "straddle_pct_sma50": 0.029,
+            "implied_vol_rank": 0.5,
+            "implied_vol_percentile": 0.6
+        },
+       {
+        "ticker": "MSFT",
+        "datetime": "2023-10-01T00:00:00",
+        "spot_price": 150.0,
+        "upper_value": 155.0,
+        "lower_value": 145.0,
+        "straddle_value": 5.0,
+        "past_straddle_value": 4.5,
+        "straddle_pct_value": 0.03,
+        "past_straddle_pct_value": 0.02,
+        "PLower3": 140.0,
+        "PLower2": 142.0,
+        "PLower1": 144.0,
+        "PMean": 150.0,
+        "PUpper1": 152.0,
+        "PUpper2": 154.0,
+        "PUpper3": 156.0,
+        "straddle_pct_sma10": 0.025,
+        "straddle_pct_sma20": 0.027,
+        "straddle_pct_sma30": 0.028,
+        "straddle_pct_sma50": 0.029,
+        "implied_vol_rank": 0.5,
+        "implied_vol_percentile": 0.6
+       }
+
+    ]
+}
